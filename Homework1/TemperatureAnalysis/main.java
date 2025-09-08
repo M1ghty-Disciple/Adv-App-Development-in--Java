@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class main {
 
+
+    //Finds the highest temperature
     public static void max(int[] temp) {
         int max = 0;
         int index = 0;
@@ -19,6 +21,21 @@ public class main {
         System.out.println("Highest Temperature: " + max + " (Day " + index + ")");
 
     }
+    //Finds the Lowest Temperature
+    public static void min(int[] temp){
+        int min = 1000; 
+        int index = 0; 
+
+        for (int i = 0; i < temp.length; i++) {
+            if (min > temp[i]) {
+                min = temp[i];
+                index = i;
+            } else
+                continue;
+        }
+
+        System.out.println("Lowest Temperature: " + min + " (Day " + index + ")");
+    }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -27,7 +44,7 @@ public class main {
         System.out.println("Enter the number of days (N): ");
         int num = input.nextInt();
 
-        // Create array based on numnber of days
+        // Create array based on number of days
         int[] temp = new int[num];
 
         // Fill the array
@@ -37,5 +54,6 @@ public class main {
         }
 
         max(temp);
+        min(temp);
     }
 }
