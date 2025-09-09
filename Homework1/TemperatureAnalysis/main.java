@@ -13,7 +13,7 @@ public class main {
         for (int i = 0; i < temp.length; i++) {
             if (max < temp[i]) {
                 max = temp[i];
-                index = i;
+                index = i+1;
             } else
                 continue;
         }
@@ -29,12 +29,23 @@ public class main {
         for (int i = 0; i < temp.length; i++) {
             if (min > temp[i]) {
                 min = temp[i];
-                index = i;
+                index = i+1;
             } else
                 continue;
         }
 
         System.out.println("Lowest Temperature: " + min + " (Day " + index + ")");
+    }
+
+    //Finds the Average of all temperatures
+    public static void avg(int[] temp){
+        double sum = 0.0;
+
+        for(int i = 0; i < temp.length; i++){
+            sum += temp[i];
+        }
+        double avg = sum/temp.length;
+        System.out.println("Average Temperature: " + avg);
     }
 
     public static void main(String[] args) {
@@ -55,5 +66,6 @@ public class main {
 
         max(temp);
         min(temp);
+        avg(temp);
     }
 }
