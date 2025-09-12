@@ -48,30 +48,36 @@ public class main {
         System.out.println("Average Temperature: " + avg);
     }
 
-    //Streak function 
-    public static void streak(int temp[]){
-        int streak = 0; 
-        int start, end; 
-        
-        for(int i = 0; i < temp.length; i++){
-            for(int j = i+1; j < temp.length; j++){
-                if(temp[i] < temp[j]){
-                    streak++;
-
-                }
-            }
-        }
-    }
-
+    // Check whether are any duplicates
     public static String dup(int temp[]) {
         for (int i = 0; i < temp.length - 1; i++) {
-            for (int j = i+1; j < temp.length; j++) {
+            for (int j = i + 1; j < temp.length; j++) {
 
                 if (temp[i] == temp[j])
                     return "Any Duplicate temperatures recorded? Yes";
             }
         }
         return "Any Duplicate temperatures recorded? No";
+    }
+
+    public static void streak(int temp[]) {
+        int streak = 0;
+        int streak1 = 0;
+
+        for (int i = 0; i < temp.length - 1; i++) {
+            if (temp[i] < temp[i + 1]) {
+                streak1++;
+            } else {
+                if (streak < streak1) {
+                    streak = streak1;
+                    streak1 = 0;
+                    continue;
+                }
+            }
+
+        }
+        streak = streak1;
+        System.out.println("Longest increasing streak is: " + streak + 1 + " Days");
     }
 
     public static void main(String[] args) {
@@ -93,6 +99,9 @@ public class main {
         max(temp);
         min(temp);
         avg(temp);
+        streak(temp);
         System.out.println(dup(temp));
+
+        input.close();
     }
 }
