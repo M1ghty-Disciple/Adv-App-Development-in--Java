@@ -28,18 +28,12 @@ public class main {
 
        
         Scanner input = new Scanner(System.in);
-        int choice = 0;
+        
 
         
         
             menu();  
-            try{
-                choice = input.nextInt();  
-            }catch(InputMismatchException e){
-                System.out.println("Your input must be a number from 1-3");
-                
-            }
-            
+            int choice = input.nextInt();  
             //switch statement to handle different user inputs
             switch(choice){
                 //View Available Items
@@ -49,22 +43,29 @@ public class main {
 
                 //Borrow an item
                 case 2:
-                    System.out.print("Enter item ID to borrow: ");
-                    String id = input.nextLine();
+                    
+                    try{
+                        System.out.print("Enter item ID to borrow: ");
+                        String id = input.nextLine();
 
-                    System.out.println("Enter the number of days");
-                    int days = input.nextInt();
+                        System.out.println("Enter the number of days");
+                        int days = input.nextInt();
 
-                    for(int i = 0; i < availableItems.length; i++){
-                        if(availableItems[i].getItemId().equalsIgnoreCase(id)){
-                        System.out.printf("You borrowed %s for %d days. Total cost is %d", 
-                        availableItems[i].getTitle(), days, availableItems[i].calculateBorrowCost(days));
+                        for(int i = 0; i < availableItems.length; i++){
+                            if(availableItems[i].getItemId().equalsIgnoreCase(id)){
+                                System.out.printf("You borrowed %s for %d days. Total cost is %d", 
+                                availableItems[i].getTitle(), days, availableItems[i].calculateBorrowCost(days));
+
+                                availableItems[i] = null;
+                                System.out.println("Item is now marked as borrowed and no longer available");
                         }
                     }
-                
+                    }catch(InputMismatchException e){
+                        System.out.println("There seems to be an error in yout input");
+                    }
                     break;
                     
-                    
+                    //test whether .equals can handle null
                     
                 //Exit
                 case 3:
