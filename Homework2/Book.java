@@ -13,8 +13,8 @@ public class Book extends LibraryItem implements Borrowable {
 
     @Override
     public void displayDetails() {
-        System.out.println("[Book] ID=" + itemId + "| Title=" + title + "| Auther=" + author
-                + "| Pages=" + numPages + "| $/day=" + borrowPricePerDay);
+        System.out.println("[Book] ID=" + itemId + " | Title=" + title + " | Auther=" + author
+                + " | Pages=" + numPages + " | $/day=" + borrowPricePerDay);
     }
 
     @Override

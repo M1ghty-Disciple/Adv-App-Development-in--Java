@@ -13,8 +13,8 @@ public class DVD extends LibraryItem implements Borrowable {
 
     @Override
     public void displayDetails() {
-        System.out.println("[DVD] ID=" + itemId + "| Title=" + title + "| Duration=" + duration
-                + "| Rating=" + ageRating + "| $/day=" + borrowPricePerDay);
+        System.out.println("[DVD] ID=" + itemId + " | Title=" + title + " | Duration=" + duration
+                + " | Rating=" + ageRating + " | $/day=" + borrowPricePerDay);
     }
 
     @Override
