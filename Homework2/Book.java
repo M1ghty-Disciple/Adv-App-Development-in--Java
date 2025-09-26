@@ -1,4 +1,4 @@
-public class Book extends LibraryItem implements Borrowable {
+public class Book extends LibraryItem{
 
     // attributes
     protected String author;
@@ -10,6 +10,8 @@ public class Book extends LibraryItem implements Borrowable {
         this.author = author;
         this.numPages = numPages;
     }
+
+    
 
     @Override
     public void displayDetails() {

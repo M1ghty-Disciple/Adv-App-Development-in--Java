@@ -1,4 +1,4 @@
-public class Magazine extends LibraryItem implements Borrowable {
+public class Magazine extends LibraryItem{
 
     // attributes
     protected String issue;
@@ -14,7 +14,7 @@ public class Magazine extends LibraryItem implements Borrowable {
     // abstract method implementation
     @Override
     public void displayDetails() {
-        System.out.println("[Magazine] ID=" + itemId + " | Title=" + title + " | Issue=" + issueNumber
+        System.out.println("[Magazine] ID=" + itemId + " | Title=" + title + " | Issue=" + issue
                 + " | Publisher=" + publisher + " | $/day=" + borrowPricePerDay);
     }
 

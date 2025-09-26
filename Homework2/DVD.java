@@ -1,4 +1,4 @@
-public class DVD extends LibraryItem implements Borrowable {
+public class DVD extends LibraryItem {
 
     // attributes
     protected String duration;

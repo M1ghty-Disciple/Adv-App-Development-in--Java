@@ -1,4 +1,4 @@
-abstract class LibraryItem {
+abstract class LibraryItem implements Borrowable{
 
     // attributes
     protected String itemId;
@@ -12,6 +12,15 @@ abstract class LibraryItem {
         this.borrowPricePerDay = borrowPricePerDay;
     }
 
+    public String getItemId(){
+        return itemId;
+    }
+    public String getTitle(){
+        return title;
+    }
+
     // to be later implemented by subclasses
     public abstract void displayDetails();
+
+    public abstract double calculateBorrowCost(int days);
 }
