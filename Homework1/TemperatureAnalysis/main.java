@@ -77,7 +77,7 @@ public class main {
 
         }
         streak = streak1;
-        System.out.println("Longest increasing streak is: " + streak + 1 + " Days");
+        System.out.println("Longest increasing streak is: " + (streak + 1) + " Days");
     }
 
     public static void main(String[] args) {

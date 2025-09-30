@@ -33,13 +33,20 @@ class main {
                 break;
 
             case "/":
-                int quot = a / b;
-                System.out.println("Result: " + quot);
+
+                if (b != 0) {
+                    int quot = a / b;
+                    System.out.println("Result: " + quot);
+                } else
+                    System.out.println("Cannot divide by zero");
                 break;
 
             case "%":
-                int modu = a % b;
-                System.out.println("Result: " + modu);
+                if (b != 0) {
+                    int quot = a % b;
+                    System.out.println("Result: " + quot);
+                } else
+                    System.out.println("Cannot divide by zero");
                 break;
 
             case "&":

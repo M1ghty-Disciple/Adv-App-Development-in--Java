@@ -90,7 +90,7 @@ public class main {
 
             }// End of switch Stmt
 
-        }
+        } // end of while loop
 
     }
 }

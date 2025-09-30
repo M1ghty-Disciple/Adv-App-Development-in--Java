@@ -8,13 +8,15 @@ class main {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a phrase: ");
-        String phrase = input.nextLine().toUpperCase();
+        String phrase = input.nextLine();
 
         String[] words = phrase.split("\\s+");
         StringBuilder abb = new StringBuilder();
 
         for (int i = 0; i < words.length; i++) {
-            abb.append(words[i].charAt(0));
+            char first = words[i].charAt(0);
+            if (Character.isUpperCase(first))
+                abb.append(first);
         }
 
         System.out.println("Generated Abrreviation: " + abb);
