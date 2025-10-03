@@ -16,7 +16,41 @@ public class Address {
         this.zip = zip;
     }
 
+    //getters
+    public String getStreet(){
+        return street;
+    }
+
+    public String getCity(){
+        return city;
+    }
+
+    public String getState(){
+        return state;
+    }
+
+    public String getZip(){
+        return zip;
+    }
+
+
+
+
+
+
+
+
+
+
     public String display() {
         return String.format("%s, %s, %s, %s", street, city, state, zip);
+    }
+
+    public boolean compareAdd(Address add){
+        
+
+
+
+        return true;
     }
 }
