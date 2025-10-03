@@ -17,6 +17,6 @@ public class Address {
     }
 
     public String display() {
-        return String.format("%s, %s, %s, %s", street, city, state, zip);
+        return String.format("%s, %s, %s, %s\n", street, city, state, zip);
     }
 }

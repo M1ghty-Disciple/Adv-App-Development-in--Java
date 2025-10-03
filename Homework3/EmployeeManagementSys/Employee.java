@@ -27,12 +27,32 @@ public class Employee {
     }
 
     // getters
+    public String getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getDesignation(){
+        return designation;
+    }
+
     public double getSalary() {
         return salary;
     }
 
-    public String getAddress() {
-        return address.display();
+    public Address getAddress() {
+        return address;
+    }
+
+
+    //Override tostring to let printing be easier
+    @Override
+    public String toString(){
+        return String.format("ID: %s \nName: %s\nDesignation: %s\nSalary: %.2f\nAddress: %s",
+        id, name, designation, salary, address.display());
     }
 
 }
