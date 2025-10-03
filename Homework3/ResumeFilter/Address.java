@@ -46,11 +46,11 @@ public class Address {
         return String.format("%s, %s, %s, %s", street, city, state, zip);
     }
 
+    //will go through and compare different parts of an address function | return true if they are all the same
     public boolean compareAdd(Address add){
-        
+        if(street.equals(add.getStreet()) && city.equals(add.getCity()) && state.equals(add.getState()) && zip.equals(add.getZip()))
+            return true;
 
-
-
-        return true;
+        return false;
     }
 }
