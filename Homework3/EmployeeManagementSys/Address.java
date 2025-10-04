@@ -16,7 +16,8 @@ public class Address {
         this.zip = zip;
     }
 
-    public String display() {
+    @Override
+    public String toString() {
         return String.format("%s, %s, %s, %s\n", street, city, state, zip);
     }
 }

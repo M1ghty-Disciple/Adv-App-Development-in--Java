@@ -16,41 +16,41 @@ public class Address {
         this.zip = zip;
     }
 
-    //getters
-    public String getStreet(){
+    // getters
+    public String getStreet() {
         return street;
     }
 
-    public String getCity(){
+    public String getCity() {
         return city;
     }
 
-    public String getState(){
+    public String getState() {
         return state;
     }
 
-    public String getZip(){
+    public String getZip() {
         return zip;
     }
 
-
-
-
-
-
-
-
-
-
-    public String display() {
-        return String.format("%s, %s, %s, %s", street, city, state, zip);
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %s, %s\n", street, city, state, zip);
     }
 
-    //will go through and compare different parts of an address function | return true if they are all the same
-    public boolean compareAdd(Address add){
-        if(street.equals(add.getStreet()) && city.equals(add.getCity()) && state.equals(add.getState()) && zip.equals(add.getZip()))
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)// if they are the same obj will return true
             return true;
 
-        return false;
+        if (!(o instanceof Address)) {// returns false if the object is not type resume
+            return false;
+        }
+
+        Address c = (Address) o; // Typecast object to resume
+
+        return (this.street.equals(c.getStreet()) && (this.city.equals(c.getCity()))
+                && (this.state.equals(c.getState())) && (this.zip.equals(c.getZip())));
+
     }
 }
