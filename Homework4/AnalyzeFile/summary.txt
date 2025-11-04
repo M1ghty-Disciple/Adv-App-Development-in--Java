@@ -1,0 +1,8 @@
+SUMMARY 
+---------------- 
+Total lines: 2
+Total Words: 9
+Total Characters (excluding spaces): 34
+---------------- 
+First non-blank line: For whom the bells toll
+Last non-blank line: They toll for thee

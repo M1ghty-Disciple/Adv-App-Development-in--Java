@@ -27,15 +27,15 @@ public class Employee {
     }
 
     // getters
-    public String getId(){
+    public String getId() {
         return id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getDesignation(){
+    public String getDesignation() {
         return designation;
     }
 
@@ -47,12 +47,11 @@ public class Employee {
         return address;
     }
 
-
-    //Override tostring to let printing be easier
+    // Override tostring to let printing be easier
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("ID: %s \nName: %s\nDesignation: %s\nSalary: %.2f\nAddress: %s",
-        id, name, designation, salary, address.display());
+                id, name, designation, salary, address.display());
     }
 
 }
